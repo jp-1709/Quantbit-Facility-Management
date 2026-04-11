@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_wjrjy",
+  "naming_series",
+  "customer",
+  "col_nxihw",
+  "property",
+  "fm_contract",
+  "sec_agair",
+  "invoice_date",
+  "due_date",
+  "col_nhhph",
+  "status",
+  "total_amount",
+  "sec_ktcll",
+  "invoice_lines",
+  "sec_qhwid",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_wjrjy",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SINV-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_nxihw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fm_contract",
+   "fieldtype": "Link",
+   "label": "FM Contract",
+   "options": "FM Contract"
+  },
+  {
+   "fieldname": "sec_agair",
+   "fieldtype": "Section Break",
+   "label": "Dates & Status"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "col_nhhph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nPaid\nOverdue\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_ktcll",
+   "fieldtype": "Section Break",
+   "label": "Invoice Lines"
+  },
+  {
+   "fieldname": "invoice_lines",
+   "fieldtype": "Table",
+   "label": "Invoice Lines",
+   "options": "WO Invoice Line",
+   "description": "Auto-created from completed Work Orders on QC Pass"
+  },
+  {
+   "fieldname": "sec_qhwid",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contracts & Finance",
+ "name": "Service Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Property Manager",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By naming_series field",
+ "naming_series": "SINV-.####"
+}

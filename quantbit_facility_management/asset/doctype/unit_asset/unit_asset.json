@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_setet",
+  "naming_series",
+  "unit",
+  "col_rxeqc",
+  "asset_name",
+  "asset_category",
+  "sec_tkgml",
+  "make_model",
+  "serial_number",
+  "col_kudbg",
+  "erpnext_asset",
+  "sec_uuyhe",
+  "purchase_date",
+  "warranty_expiry",
+  "col_xydzw",
+  "condition",
+  "last_service_date",
+  "sec_splcx",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_setet",
+   "fieldtype": "Section Break",
+   "label": "Unit & Identity"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "UA-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Property Unit",
+   "options": "Property Unit",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "col_rxeqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "HVAC\nElectrical\nPlumbing\nAppliance\nFurniture\nSecurity\nFire Safety\nLift\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_tkgml",
+   "fieldtype": "Section Break",
+   "label": "Manufacturer & Identification"
+  },
+  {
+   "fieldname": "make_model",
+   "fieldtype": "Data",
+   "label": "Make & Model"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "col_kudbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "erpnext_asset",
+   "fieldtype": "Link",
+   "label": "ERPNext Asset",
+   "options": "Asset",
+   "description": "Link for accounting / depreciation (if capitalised)"
+  },
+  {
+   "fieldname": "sec_uuyhe",
+   "fieldtype": "Section Break",
+   "label": "Dates & Condition"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "warranty_expiry",
+   "fieldtype": "Date",
+   "label": "Warranty Expiry",
+   "description": "Triggers alert 30 days before expiry"
+  },
+  {
+   "fieldname": "col_xydzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "label": "Condition",
+   "options": "\nGood\nFair\nNeeds Repair\nReplace",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "last_service_date",
+   "fieldtype": "Date",
+   "label": "Last Service Date",
+   "read_only": 1,
+   "description": "Auto-updated on Work Order closure"
+  },
+  {
+   "fieldname": "sec_splcx",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Operational Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset",
+ "name": "Unit Asset",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Property Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Technician",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By naming_series field",
+ "naming_series": "UA-.####",
+ "title_field": "asset_name"
+}

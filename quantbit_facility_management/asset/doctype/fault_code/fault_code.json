@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:fault_code",
+ "creation": "2026-04-10 15:50:06.906702",
+ "description": "Three-level fault taxonomy: Service Group \u2192 Fault Category \u2192 Fault Code.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_general",
+  "service_group_code",
+  "service_group",
+  "col_break_1",
+  "fault_category_code",
+  "fault_category",
+  "sec_fault",
+  "fault_code",
+  "fault_description",
+  "tab_sla",
+  "sec_priority",
+  "default_priority",
+  "col_break_2",
+  "sla_override",
+  "sec_status",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_general",
+   "fieldtype": "Tab Break",
+   "label": "General Details"
+  },
+  {
+   "bold": 1,
+   "description": "e.g. SG-HVAC",
+   "fieldname": "service_group_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service Group Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_group",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fault_category_code",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Fault Category Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fault_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fault Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_fault",
+   "fieldtype": "Section Break",
+   "label": "Fault Definition"
+  },
+  {
+   "fieldname": "fault_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fault Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fault_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Fault Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_sla",
+   "fieldtype": "Tab Break",
+   "label": "Priority & SLA"
+  },
+  {
+   "fieldname": "sec_priority",
+   "fieldtype": "Section Break",
+   "label": "Default Priority"
+  },
+  {
+   "fieldname": "default_priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Default Priority",
+   "options": "\nP1 - Critical\nP2 - High\nP3 - Medium\nP4 - Low",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "If checked, this fault code overrides the contract SLA",
+   "fieldname": "sla_override",
+   "fieldtype": "Check",
+   "label": "SLA Override"
+  },
+  {
+   "fieldname": "sec_status",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-10 16:05:28.549919",
+ "modified_by": "Administrator",
+ "module": "Asset",
+ "name": "Fault Code",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "CAFM Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "CAFM User"
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "fault_code,fault_description,service_group,fault_category",
+ "sort_field": "service_group_code",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "fault_description",
+ "track_changes": 1
+}

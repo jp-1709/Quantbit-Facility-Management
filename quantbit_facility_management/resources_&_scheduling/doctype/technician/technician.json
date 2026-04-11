@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_oazir",
+  "naming_series",
+  "technician_name",
+  "employee",
+  "col_fdicy",
+  "is_active",
+  "technician_email",
+  "technician_phone",
+  "sec_jaxwn",
+  "skill_set",
+  "trade_category",
+  "sec_vsllm",
+  "certifications"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_oazir",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TECH-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technician_name",
+   "fieldtype": "Data",
+   "label": "Technician Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee (ERPNext)",
+   "options": "Employee",
+   "description": "Links to ERPNext Employee for payroll"
+  },
+  {
+   "fieldname": "col_fdicy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "technician_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "technician_phone",
+   "fieldtype": "Data",
+   "label": "Mobile No."
+  },
+  {
+   "fieldname": "sec_jaxwn",
+   "fieldtype": "Section Break",
+   "label": "Skills & Trade"
+  },
+  {
+   "fieldname": "skill_set",
+   "fieldtype": "Small Text",
+   "label": "Skill Set",
+   "description": "Comma-separated skills e.g. HVAC, Electrical, Plumbing"
+  },
+  {
+   "fieldname": "trade_category",
+   "fieldtype": "Select",
+   "label": "Primary Trade",
+   "options": "\nHVAC\nElectrical\nPlumbing\nFire Safety\nGeneral Maintenance\nIT\nSecurity\nCleaning\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_vsllm",
+   "fieldtype": "Section Break",
+   "label": "Certifications"
+  },
+  {
+   "fieldname": "certifications",
+   "fieldtype": "Table",
+   "label": "Certifications",
+   "options": "Technician Certification",
+   "description": "Expiry alerts sent 30 days before"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Resources & Scheduling",
+ "name": "Technician",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Supervisor",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By naming_series field",
+ "naming_series": "TECH-.####",
+ "title_field": "technician_name"
+}

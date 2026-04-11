@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:area_name",
+ "creation": "2026-04-09 10:05:22.496741",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "area_name",
+  "area_group_code",
+  "area_group_name",
+  "city_code",
+  "gps_lat",
+  "gps_long",
+  "is_active",
+  "area_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "area_code",
+   "fieldtype": "Data",
+   "label": "Area Code"
+  },
+  {
+   "fieldname": "area_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Area Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "area_group_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Area Group Code",
+   "options": "Area Group"
+  },
+  {
+   "fetch_from": "area_group_code.area_group_name",
+   "fieldname": "area_group_name",
+   "fieldtype": "Data",
+   "label": "Area Group Name"
+  },
+  {
+   "fieldname": "city_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City Code",
+   "options": "City"
+  },
+  {
+   "fieldname": "gps_lat",
+   "fieldtype": "Data",
+   "label": "GPS Lat"
+  },
+  {
+   "fieldname": "gps_long",
+   "fieldtype": "Data",
+   "label": "GPS Long"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-10 15:13:42.367478",
+ "modified_by": "Administrator",
+ "module": "Asset",
+ "name": "Area",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

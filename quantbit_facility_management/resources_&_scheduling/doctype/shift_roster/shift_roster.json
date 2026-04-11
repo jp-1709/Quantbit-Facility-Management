@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_fwrzd",
+  "naming_series",
+  "roster_name",
+  "property",
+  "col_mwcnp",
+  "roster_date",
+  "status",
+  "sec_qjetk",
+  "staff_assignments",
+  "sec_orott",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_fwrzd",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ROSTER-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "roster_name",
+   "fieldtype": "Data",
+   "label": "Roster Name",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_mwcnp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "roster_date",
+   "fieldtype": "Date",
+   "label": "Roster Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_qjetk",
+   "fieldtype": "Section Break",
+   "label": "Staff Assignments"
+  },
+  {
+   "fieldname": "staff_assignments",
+   "fieldtype": "Table",
+   "label": "Staff Assignments",
+   "options": "Staff Assignment"
+  },
+  {
+   "fieldname": "sec_orott",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Resources & Scheduling",
+ "name": "Shift Roster",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Supervisor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Technician",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By naming_series field",
+ "naming_series": "ROSTER-.####",
+ "title_field": "roster_name"
+}

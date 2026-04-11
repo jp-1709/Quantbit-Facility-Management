@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_nafec",
+  "sec_wcqee",
+  "company",
+  "default_currency",
+  "tab_cfbom",
+  "sec_fbvkb",
+  "ppm_auto_create",
+  "sla_breach_escalation",
+  "tab_ddlha",
+  "sec_blqgr",
+  "statutory_alert_days_first",
+  "statutory_alert_days_second",
+  "col_swvky",
+  "statutory_alert_days_third",
+  "warranty_alert_days",
+  "tab_hqmas",
+  "sec_ggjkw",
+  "fm_manager_email",
+  "accountant_email",
+  "col_tjoop",
+  "property_mgr_email"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_nafec",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "sec_wcqee",
+   "fieldtype": "Section Break",
+   "label": "Company Defaults"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency",
+   "default": "AED"
+  },
+  {
+   "fieldname": "tab_cfbom",
+   "fieldtype": "Tab Break",
+   "label": "Scheduler Flags"
+  },
+  {
+   "fieldname": "sec_fbvkb",
+   "fieldtype": "Section Break",
+   "label": "PPM & SLA Automation"
+  },
+  {
+   "fieldname": "ppm_auto_create",
+   "fieldtype": "Check",
+   "label": "Auto-Create PPM Work Orders",
+   "default": "1"
+  },
+  {
+   "fieldname": "sla_breach_escalation",
+   "fieldtype": "Check",
+   "label": "Enable SLA Breach Escalation",
+   "default": "1"
+  },
+  {
+   "fieldname": "tab_ddlha",
+   "fieldtype": "Tab Break",
+   "label": "Alert Thresholds"
+  },
+  {
+   "fieldname": "sec_blqgr",
+   "fieldtype": "Section Break",
+   "label": "Statutory & Contract Expiry Alerts (Days Before)"
+  },
+  {
+   "fieldname": "statutory_alert_days_first",
+   "fieldtype": "Int",
+   "label": "First Alert (days)",
+   "default": "90"
+  },
+  {
+   "fieldname": "statutory_alert_days_second",
+   "fieldtype": "Int",
+   "label": "Second Alert (days)",
+   "default": "60"
+  },
+  {
+   "fieldname": "col_swvky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "statutory_alert_days_third",
+   "fieldtype": "Int",
+   "label": "Third Alert (days)",
+   "default": "30"
+  },
+  {
+   "fieldname": "warranty_alert_days",
+   "fieldtype": "Int",
+   "label": "Warranty Alert (days)",
+   "default": "30"
+  },
+  {
+   "fieldname": "tab_hqmas",
+   "fieldtype": "Tab Break",
+   "label": "Notifications"
+  },
+  {
+   "fieldname": "sec_ggjkw",
+   "fieldtype": "Section Break",
+   "label": "Email Recipients"
+  },
+  {
+   "fieldname": "fm_manager_email",
+   "fieldtype": "Data",
+   "label": "FM Manager Email"
+  },
+  {
+   "fieldname": "accountant_email",
+   "fieldtype": "Data",
+   "label": "Accountant Email"
+  },
+  {
+   "fieldname": "col_tjoop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_mgr_email",
+   "fieldtype": "Data",
+   "label": "Property Manager Email"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAFM Configuration",
+ "name": "CAFM Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "issingle": 1
+}

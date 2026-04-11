@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_eloeg",
+  "template_name",
+  "template_code",
+  "col_cuftw",
+  "service_category",
+  "description",
+  "sec_ohbif",
+  "checklist_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_eloeg",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "template_code",
+   "fieldtype": "Data",
+   "label": "Template Code",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_cuftw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_category",
+   "fieldtype": "Link",
+   "label": "Service Category",
+   "options": "Service Category"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "sec_ohbif",
+   "fieldtype": "Section Break",
+   "label": "Checklist Items"
+  },
+  {
+   "fieldname": "checklist_items",
+   "fieldtype": "Table",
+   "label": "Checklist Items",
+   "options": "Checklist Item"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAFM Configuration",
+ "name": "Checklist Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Supervisor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Technician",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:template_name",
+ "naming_rule": "By naming_series field",
+ "title_field": "template_name"
+}

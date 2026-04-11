@@ -1,0 +1,37 @@
+{
+    "name": "Contract SLA Detail",
+    "module": "Contracts & Finance",
+    "doctype": "DocType",
+    "istable": 1,
+    "track_changes": 0,
+    "description": "Child table: SLA response & resolution targets per priority level for a Contract.",
+    "fields": [
+        {
+            "fieldname": "priority",
+            "fieldtype": "Select",
+            "label": "Priority",
+            "options": "P1 - Critical\nP2 - High\nP3 - Medium\nP4 - Low",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "response_sla_hrs",
+            "fieldtype": "Float",
+            "label": "Response SLA (hrs)",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "resolution_sla_hrs",
+            "fieldtype": "Float",
+            "label": "Resolution SLA (hrs)",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "sla_notes",
+            "fieldtype": "Small Text",
+            "label": "Notes"
+        }
+    ]
+}

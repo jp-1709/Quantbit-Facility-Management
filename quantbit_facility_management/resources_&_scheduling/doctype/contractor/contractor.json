@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_vgkyf",
+  "naming_series",
+  "contractor_name",
+  "supplier",
+  "col_rsjwz",
+  "is_active",
+  "contractor_email",
+  "contractor_phone",
+  "sec_qmmav",
+  "approved_categories",
+  "performance_rating",
+  "col_prqpo",
+  "contract_start_date",
+  "contract_end_date",
+  "sec_dbxxq",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_vgkyf",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CONT-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor_name",
+   "fieldtype": "Data",
+   "label": "Contractor Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier (ERPNext)",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "col_rsjwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contractor_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contractor_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "sec_qmmav",
+   "fieldtype": "Section Break",
+   "label": "Categories & Performance"
+  },
+  {
+   "fieldname": "approved_categories",
+   "fieldtype": "Small Text",
+   "label": "Approved Service Categories",
+   "description": "Comma-separated service categories"
+  },
+  {
+   "fieldname": "performance_rating",
+   "fieldtype": "Float",
+   "label": "Performance Rating (0\u20135)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_prqpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "sec_dbxxq",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Resources & Scheduling",
+ "name": "Contractor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Supervisor",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By naming_series field",
+ "naming_series": "CONT-.####",
+ "title_field": "contractor_name"
+}

@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_mlgso",
+  "naming_series",
+  "permit_type",
+  "col_dvohn",
+  "status",
+  "work_order",
+  "sec_rnmyj",
+  "property",
+  "location_details",
+  "col_jfkjs",
+  "start_datetime",
+  "end_datetime",
+  "sec_hfzwi",
+  "issued_to",
+  "approved_by",
+  "sec_vknwj",
+  "isolation_rows",
+  "sec_ycluu",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_mlgso",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PTW-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "permit_type",
+   "fieldtype": "Select",
+   "label": "Permit Type",
+   "options": "Hot Work\nCold Work\nConfined Space\nElectrical\nWorking at Height\nChemical\nGeneral",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_dvohn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nActive\nClosed\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_rnmyj",
+   "fieldtype": "Section Break",
+   "label": "Location & Scope"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_details",
+   "fieldtype": "Data",
+   "label": "Location Details"
+  },
+  {
+   "fieldname": "col_jfkjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "label": "Start Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_datetime",
+   "fieldtype": "Datetime",
+   "label": "End Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_hfzwi",
+   "fieldtype": "Section Break",
+   "label": "Personnel"
+  },
+  {
+   "fieldname": "issued_to",
+   "fieldtype": "Link",
+   "label": "Issued To (Technician)",
+   "options": "Technician",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "sec_vknwj",
+   "fieldtype": "Section Break",
+   "label": "Isolation Points"
+  },
+  {
+   "fieldname": "isolation_rows",
+   "fieldtype": "Table",
+   "label": "Isolation Points",
+   "options": "PTW Isolation Row"
+  },
+  {
+   "fieldname": "sec_ycluu",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes / Precautions"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance & HSE",
+ "name": "Permit to Work",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "FM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Supervisor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Technician",
+   "read": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By naming_series field",
+ "naming_series": "PTW-.####",
+ "title_field": "permit_type"
+}
