@@ -14,6 +14,8 @@
   "sec_client_info",
   "client_code",
   "client_name",
+  "branch_code",
+  "branch_name",
   "col_break_2",
   "contract_group",
   "contract_type",
@@ -58,6 +60,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "contract_title",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -70,6 +73,7 @@
    "label": "Client & Scope"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "client_code",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -87,10 +91,26 @@
    "read_only": 1
   },
   {
+   "fieldname": "branch_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "branch_code.branch_name",
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name",
+   "read_only": 1
+  },
+  {
    "fieldname": "col_break_2",
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "contract_group",
    "fieldtype": "Select",
    "in_standard_filter": 1,
@@ -98,6 +118,7 @@
    "options": "\nIFM\nDC Ops\nSoft FM\nHard FM\nMEP Only\nOther"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "contract_type",
    "fieldtype": "Select",
    "label": "Contract Type",
@@ -114,6 +135,7 @@
    "label": "Contract Period"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "start_date",
    "fieldtype": "Date",
    "label": "Start Date",
@@ -124,6 +146,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date",
@@ -135,11 +158,13 @@
    "label": "Financial Terms"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "annual_value",
    "fieldtype": "Currency",
    "label": "Annual Value (OMR)"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "billing_model",
    "fieldtype": "Select",
    "label": "Billing Model",
@@ -150,11 +175,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "fixed_monthly",
    "fieldtype": "Currency",
    "label": "Fixed Monthly (OMR)"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "payment_status",
    "fieldtype": "Select",
    "label": "Payment Status",
@@ -172,6 +199,7 @@
   },
   {
    "allow_bulk_edit": 1,
+   "allow_on_submit": 1,
    "description": "Define Response & Resolution SLA for each priority level",
    "fieldname": "sla_details",
    "fieldtype": "Table",
@@ -189,6 +217,7 @@
    "label": "Status"
   },
   {
+   "allow_on_submit": 1,
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -214,7 +243,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-10 14:38:13.847661",
+ "modified": "2026-04-24 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Contracts & Finance",
  "name": "FM Contract",
@@ -233,15 +262,94 @@
   },
   {
    "amend": 1,
+   "cancel": 1,
    "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
    "read": 1,
-   "role": "CAFM Manager",
+   "report": 1,
+   "role": "Super Admin",
    "submit": 1,
    "write": 1
   },
   {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
    "read": 1,
-   "role": "CAFM User"
+   "report": 1,
+   "role": "Management Director",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client Admin",
+   "submit": 0,
+   "write": 0
   }
  ],
  "row_format": "Dynamic",

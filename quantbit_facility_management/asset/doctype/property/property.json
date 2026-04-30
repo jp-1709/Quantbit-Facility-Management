@@ -21,6 +21,8 @@
   "sec_hierarchy",
   "area_code",
   "area_name",
+  "branch_code",
+  "branch_name",
   "col_break_3",
   "city_code",
   "sec_gps",
@@ -130,6 +132,22 @@
    "read_only": 1
   },
   {
+   "fetch_from": "area_code.branch_code",
+   "fieldname": "branch_code",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "area_code.branch_name",
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name",
+   "read_only": 1
+  },
+  {
    "fieldname": "col_break_3",
    "fieldtype": "Column Break"
   },
@@ -229,7 +247,7 @@
   }
  ],
  "links": [],
- "modified": "2026-04-10 16:40:31.718910",
+ "modified": "2026-04-24 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Asset",
  "name": "Property",
@@ -244,14 +262,121 @@
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
    "read": 1,
-   "role": "CAFM Manager",
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
    "write": 1
   },
   {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
    "read": 1,
-   "role": "CAFM User"
+   "report": 1,
+   "role": "Management Director",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "submit": 0,
+   "write": 0
   }
  ],
  "row_format": "Dynamic",

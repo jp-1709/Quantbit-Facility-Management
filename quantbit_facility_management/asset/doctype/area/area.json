@@ -9,13 +9,15 @@
  "engine": "InnoDB",
  "field_order": [
   "area_name",
+  "area_code",
   "area_group_code",
   "area_group_name",
+  "branch_code",
+  "branch_name",
   "city_code",
   "gps_lat",
   "gps_long",
-  "is_active",
-  "area_code"
+  "is_active"
  ],
  "fields": [
   {
@@ -34,20 +36,41 @@
    "fieldname": "area_group_code",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Area Group Code",
-   "options": "Area Group"
+   "in_standard_filter": 1,
+   "label": "Area Group",
+   "options": "Area Group",
+   "reqd": 1
   },
   {
    "fetch_from": "area_group_code.area_group_name",
    "fieldname": "area_group_name",
    "fieldtype": "Data",
-   "label": "Area Group Name"
+   "label": "Area Group Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "area_group_code.branch_code",
+   "fieldname": "branch_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "area_group_code.branch_name",
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name",
+   "read_only": 1
   },
   {
    "fieldname": "city_code",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "City Code",
+   "in_standard_filter": 1,
+   "label": "City",
    "options": "City"
   },
   {
@@ -70,7 +93,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-10 15:13:42.367478",
+ "modified": "2026-04-24 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Asset",
  "name": "Area",
@@ -88,6 +111,123 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Director",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "submit": 0,
+   "write": 0
   }
  ],
  "row_format": "Dynamic",

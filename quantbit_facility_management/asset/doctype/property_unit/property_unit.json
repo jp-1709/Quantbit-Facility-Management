@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "field:unit_number",
  "creation": "2026-04-07 00:00:00.000000",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -72,41 +73,41 @@
    "label": "Unit Identity"
   },
   {
+   "bold": 1,
+   "description": "e.g. PROP-101",
    "fieldname": "unit_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Unit Number",
    "reqd": 1,
-   "bold": 1,
-   "unique": 1,
-   "in_list_view": 1,
-   "description": "e.g. PROP-101"
+   "unique": 1
   },
   {
    "fieldname": "property",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Property",
    "options": "Property",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "col_dbooa",
    "fieldtype": "Column Break"
   },
   {
+   "description": "Filter by property",
    "fieldname": "floor",
    "fieldtype": "Link",
    "label": "Floor",
-   "options": "Property Floor",
-   "description": "Filter by property"
+   "options": "Property Floor"
   },
   {
+   "description": "Fetched from Property",
    "fieldname": "property_category",
    "fieldtype": "Select",
    "label": "Property Category",
    "options": "Residential\nCommercial\nIndustrial\nMixed-Use\nShort-Term Rental",
-   "read_only": 1,
-   "description": "Fetched from Property"
+   "read_only": 1
   },
   {
    "fieldname": "sec_fwfct",
@@ -116,10 +117,10 @@
   {
    "fieldname": "usage_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Usage Type",
-   "reqd": 1,
    "options": "Residential\nCommercial\nIndustrial\nShort-Term Rental\nStorage\nParking\nCommon Area",
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "sub_type",
@@ -138,14 +139,14 @@
    "options": "\nUnfurnished\nSemi-Furnished\nFully Furnished"
   },
   {
+   "bold": 1,
+   "default": "Vacant",
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Status",
-   "reqd": 1,
-   "options": "Vacant\nOccupied\nReserved\nUnder Maintenance\nUnder Renovation\nDecommissioned",
-   "default": "Vacant",
    "in_list_view": 1,
-   "bold": 1
+   "label": "Status",
+   "options": "Vacant\nOccupied\nReserved\nUnder Maintenance\nUnder Renovation\nDecommissioned",
+   "reqd": 1
   },
   {
    "fieldname": "sec_xpjqk",
@@ -155,15 +156,15 @@
   {
    "fieldname": "area_sqft",
    "fieldtype": "Float",
-   "label": "Area (sqft)",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "label": "Area (sqft)"
   },
   {
+   "description": "Auto-calc: area_sqft \u00d7 0.0929",
    "fieldname": "area_sqm",
    "fieldtype": "Float",
    "label": "Area (sqm)",
-   "read_only": 1,
-   "description": "Auto-calc: area_sqft \u00d7 0.0929"
+   "read_only": 1
   },
   {
    "fieldname": "col_qmzth",
@@ -180,10 +181,10 @@
    "label": "Bathrooms"
   },
   {
+   "default": "0",
    "fieldname": "parking_spaces",
    "fieldtype": "Int",
-   "label": "Parking Spaces",
-   "default": "0"
+   "label": "Parking Spaces"
   },
   {
    "fieldname": "tab_trdxo",
@@ -198,8 +199,8 @@
   {
    "fieldname": "asking_rent_annual",
    "fieldtype": "Currency",
-   "label": "Asking Rent (Annual)",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "label": "Asking Rent (Annual)"
   },
   {
    "fieldname": "last_agreed_rent",
@@ -226,17 +227,17 @@
    "label": "Financial Settings"
   },
   {
+   "default": "0",
+   "description": "Auto-set: Residential = unchecked, Commercial = checked",
    "fieldname": "is_vat_applicable",
    "fieldtype": "Check",
-   "label": "VAT Applicable",
-   "default": "0",
-   "description": "Auto-set: Residential = unchecked, Commercial = checked"
+   "label": "VAT Applicable"
   },
   {
+   "default": "2",
    "fieldname": "security_deposit_months",
    "fieldtype": "Int",
-   "label": "Security Deposit (Months)",
-   "default": "2"
+   "label": "Security Deposit (Months)"
   },
   {
    "fieldname": "tab_dxbek",
@@ -251,18 +252,18 @@
   {
    "fieldname": "current_tenant",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Current Tenant",
    "options": "Customer",
-   "read_only": 1,
-   "in_list_view": 1
+   "read_only": 1
   },
   {
+   "description": "Updated via lease workflow",
    "fieldname": "current_lease",
    "fieldtype": "Link",
    "label": "Current Lease",
    "options": "Lease",
-   "read_only": 1,
-   "description": "Updated via lease workflow"
+   "read_only": 1
   },
   {
    "fieldname": "col_squyk",
@@ -275,11 +276,11 @@
    "read_only": 1
   },
   {
+   "description": "Computed daily by occupancy_engine.py",
    "fieldname": "days_vacant",
    "fieldtype": "Int",
    "label": "Days Vacant",
-   "read_only": 1,
-   "description": "Computed daily by occupancy_engine.py"
+   "read_only": 1
   },
   {
    "fieldname": "sec_gbrwb",
@@ -325,10 +326,10 @@
    "label": "Utility & RERA IDs"
   },
   {
+   "description": "Dubai RERA unit reference",
    "fieldname": "ejari_unit_number",
    "fieldtype": "Data",
-   "label": "Ejari Unit Number",
-   "description": "Dubai RERA unit reference"
+   "label": "Ejari Unit Number"
   },
   {
    "fieldname": "dewa_account_number",
@@ -380,76 +381,142 @@
  "modified_by": "Administrator",
  "module": "Asset",
  "name": "Property Unit",
+ "naming_rule": "By naming_series field",
  "owner": "Administrator",
  "permissions": [
   {
-   "role": "Property Manager",
-   "read": 1,
-   "write": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Lease Manager",
+   "print": 1,
    "read": 1,
-   "write": 1,
-   "create": 1,
-   "email": 1,
-   "print": 1,
    "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
-   "role": "FM Manager",
-   "read": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Technician",
-   "read": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Tenant",
-   "read": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
    "role": "System Manager",
-   "read": 1,
-   "write": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Director",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "submit": 0,
+   "write": 0
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "autoname": "field:unit_number",
- "naming_rule": "By naming_series field",
- "title_field": "unit_number"
+ "title_field": "unit_number",
+ "track_changes": 1
 }

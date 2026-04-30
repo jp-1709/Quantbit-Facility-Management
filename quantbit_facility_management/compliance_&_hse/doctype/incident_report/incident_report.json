@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "naming_series:",
  "creation": "2026-04-07 00:00:00.000000",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -39,12 +40,12 @@
    "reqd": 1
   },
   {
+   "bold": 1,
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
-   "reqd": 1,
-   "bold": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "col_luqyq",
@@ -53,18 +54,18 @@
   {
    "fieldname": "incident_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Incident Type",
    "options": "Near Miss\nMinor Injury\nMajor Injury\nProperty Damage\nEnvironmental\nFire\nOther",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
-   "options": "Draft\nUnder Investigation\nCorrective Action\nClosed",
-   "default": "Draft",
-   "in_list_view": 1
+   "options": "Draft\nUnder Investigation\nCorrective Action\nClosed"
   },
   {
    "fieldname": "sec_awywm",
@@ -74,10 +75,10 @@
   {
    "fieldname": "property",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Property",
    "options": "Property",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "work_order",
@@ -90,11 +91,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "incident_date",
    "fieldtype": "Date",
    "label": "Incident Date",
-   "reqd": 1,
-   "default": "Today"
+   "reqd": 1
   },
   {
    "fieldname": "incident_time",
@@ -149,68 +150,184 @@
  "modified_by": "Administrator",
  "module": "Compliance & HSE",
  "name": "Incident Report",
+ "naming_rule": "By naming_series field",
+ "naming_series": "INC-.####",
  "owner": "Administrator",
  "permissions": [
   {
-   "role": "FM Manager",
-   "read": 1,
-   "write": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
-   "submit": 1,
-   "cancel": 1,
-   "amend": 1,
    "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Supervisor",
+   "print": 1,
    "read": 1,
-   "write": 1,
-   "create": 1,
-   "submit": 1,
-   "cancel": 1,
-   "email": 1,
-   "print": 1,
    "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Technician",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
    "role": "System Manager",
-   "read": 1,
-   "write": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
-   "submit": 1,
-   "cancel": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Director",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client Admin",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client User",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vendor Contractor",
+   "submit": 0,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "autoname": "naming_series:",
- "naming_rule": "By naming_series field",
- "naming_series": "INC-.####",
- "title_field": "title"
+ "title_field": "title",
+ "track_changes": 1
 }

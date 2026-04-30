@@ -17,6 +17,8 @@
   "col_break_2",
   "wo_source",
   "sr_number",
+  "initiator_type",
+  "requested_by",
   "parent_wo_number",
   "tab_location",
   "sec_client_wo",
@@ -28,6 +30,8 @@
   "sec_location_wo",
   "property_code",
   "property_name",
+  "branch_code",
+  "branch_name",
   "col_break_4",
   "zone_code",
   "sub_zone_code",
@@ -103,6 +107,8 @@
   "col_break_13",
   "final_approver",
   "customer_rating",
+  "additional_attachment",
+  "attachment_description",
   "sec_wo_status",
   "status",
   "col_break_14",
@@ -170,6 +176,19 @@
    "fieldtype": "Link",
    "label": "Service Request",
    "options": "Service Request"
+  },
+  {
+   "fieldname": "initiator_type",
+   "fieldtype": "Select",
+   "label": "Initiator Type",
+   "options": "\nHelpdesk\nClient\nTechnician\nSystem\nInspection",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Data",
+   "label": "Requested By",
+   "read_only": 1
   },
   {
    "fieldname": "parent_wo_number",
@@ -240,6 +259,23 @@
    "fieldname": "property_name",
    "fieldtype": "Data",
    "label": "Property Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "property_code.branch_code",
+   "fieldname": "branch_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "property_code.branch_name",
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name",
    "read_only": 1
   },
   {
@@ -358,6 +394,7 @@
    "options": "\nP1 - Critical\nP2 - High\nP3 - Medium\nP4 - Low"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "actual_priority",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -464,7 +501,8 @@
   {
    "fieldname": "planned_duration_min",
    "fieldtype": "Int",
-   "label": "Planned Duration (min)"
+   "label": "Planned Duration (min)",
+   "non_negative": 1
   },
   {
    "fieldname": "sec_actual_time",
@@ -472,6 +510,7 @@
    "label": "Actual Execution"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "actual_start",
    "fieldtype": "Datetime",
    "label": "Actual Start"
@@ -481,11 +520,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "actual_end",
    "fieldtype": "Datetime",
    "label": "Actual End"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "labor_hours",
    "fieldtype": "Float",
    "label": "Labor Hours"
@@ -585,6 +626,7 @@
    "options": "\nNot Required\nRequested\nIssued\nCompleted"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "spares_amount",
    "fieldtype": "Currency",
    "label": "Spares Amount (OMR)"
@@ -594,11 +636,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "service_amount",
    "fieldtype": "Currency",
    "label": "Service Amount (OMR)"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "total_wo_cost",
    "fieldtype": "Currency",
    "label": "Total WO Cost (OMR)"
@@ -614,6 +658,7 @@
    "label": "Work Done"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "work_done_notes",
    "fieldtype": "Text Editor",
    "label": "Work Done / Closure Notes"
@@ -634,6 +679,7 @@
    "options": "Resource"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "customer_rating",
    "fieldtype": "Select",
    "in_standard_filter": 1,
@@ -646,13 +692,14 @@
    "label": "Status"
   },
   {
+   "allow_on_submit": 1,
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "WO Status",
-   "options": "\nDraft\nOpen\nAssigned\nIn Progress\nPending Parts\nNot Dispatched\nPending Approval\nCompleted\nClosed\nCancelled",
+   "options": "\nDraft\nOpen\nAssigned\nOn Hold\nIn Progress\nPending Parts\nNot Dispatched\nPending Approval\nCompleted\nClosed\nCancelled",
    "reqd": 1
   },
   {
@@ -660,6 +707,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "closed_by",
    "fieldtype": "Link",
    "label": "Closed By",
@@ -675,19 +723,33 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "before_photo",
    "fieldtype": "Attach Image",
    "label": "Before Photo "
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "after_photo",
    "fieldtype": "Attach Image",
    "label": "After Photo "
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "additional_attachment",
+   "fieldtype": "Attach",
+   "label": "Additional Attachment"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "attachment_description",
+   "fieldtype": "Data",
+   "label": "Attachment Description"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-10 17:42:53.786533",
+ "modified": "2026-04-24 17:03:16.936789",
  "modified_by": "Administrator",
  "module": "Operations",
  "name": "Work Orders",
@@ -708,19 +770,118 @@
    "amend": 1,
    "cancel": 1,
    "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
    "read": 1,
-   "role": "CAFM Manager",
+   "report": 1,
+   "role": "Super Admin",
    "submit": 1,
    "write": 1
   },
   {
+   "print": 1,
    "read": 1,
-   "role": "CAFM Technician",
+   "report": 1,
+   "role": "Management Director"
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
    "read": 1,
-   "role": "CAFM User"
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client Admin",
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client User"
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vendor Contractor",
+   "write": 1
   }
  ],
  "row_format": "Dynamic",

@@ -45,11 +45,11 @@
    "options": "Company"
   },
   {
+   "default": "AED",
    "fieldname": "default_currency",
    "fieldtype": "Link",
    "label": "Default Currency",
-   "options": "Currency",
-   "default": "AED"
+   "options": "Currency"
   },
   {
    "fieldname": "tab_cfbom",
@@ -62,16 +62,16 @@
    "label": "PPM & SLA Automation"
   },
   {
+   "default": "1",
    "fieldname": "ppm_auto_create",
    "fieldtype": "Check",
-   "label": "Auto-Create PPM Work Orders",
-   "default": "1"
+   "label": "Auto-Create PPM Work Orders"
   },
   {
+   "default": "1",
    "fieldname": "sla_breach_escalation",
    "fieldtype": "Check",
-   "label": "Enable SLA Breach Escalation",
-   "default": "1"
+   "label": "Enable SLA Breach Escalation"
   },
   {
    "fieldname": "tab_ddlha",
@@ -84,32 +84,32 @@
    "label": "Statutory & Contract Expiry Alerts (Days Before)"
   },
   {
+   "default": "90",
    "fieldname": "statutory_alert_days_first",
    "fieldtype": "Int",
-   "label": "First Alert (days)",
-   "default": "90"
+   "label": "First Alert (days)"
   },
   {
+   "default": "60",
    "fieldname": "statutory_alert_days_second",
    "fieldtype": "Int",
-   "label": "Second Alert (days)",
-   "default": "60"
+   "label": "Second Alert (days)"
   },
   {
    "fieldname": "col_swvky",
    "fieldtype": "Column Break"
   },
   {
+   "default": "30",
    "fieldname": "statutory_alert_days_third",
    "fieldtype": "Int",
-   "label": "Third Alert (days)",
-   "default": "30"
+   "label": "Third Alert (days)"
   },
   {
+   "default": "30",
    "fieldname": "warranty_alert_days",
    "fieldtype": "Int",
-   "label": "Warranty Alert (days)",
-   "default": "30"
+   "label": "Warranty Alert (days)"
   },
   {
    "fieldname": "tab_hqmas",
@@ -143,6 +143,7 @@
  ],
  "index_web_pages_for_search": 0,
  "is_submittable": 0,
+ "issingle": 1,
  "istable": 0,
  "links": [],
  "modified": "2026-04-07 00:00:00.000000",
@@ -152,30 +153,176 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "role": "System Manager",
-   "read": 1,
-   "write": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
   },
   {
-   "role": "FM Manager",
-   "read": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
    "export": 1,
-   "share": 1
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Director",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client Admin",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client User",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vendor Contractor",
+   "submit": 0,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "issingle": 1
+ "track_changes": 1
 }

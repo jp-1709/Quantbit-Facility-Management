@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "naming_series:",
  "creation": "2026-04-07 00:00:00.000000",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -33,13 +34,13 @@
    "reqd": 1
   },
   {
+   "bold": 1,
    "fieldname": "property",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Property",
    "options": "Property",
-   "reqd": 1,
-   "in_list_view": 1,
-   "bold": 1
+   "reqd": 1
   },
   {
    "fieldname": "col_fpxej",
@@ -48,16 +49,16 @@
   {
    "fieldname": "floor_number",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Floor Number",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
+   "description": "e.g. Ground, Mezzanine, Level 1, Rooftop",
    "fieldname": "floor_label",
    "fieldtype": "Data",
-   "label": "Floor Label",
    "in_list_view": 1,
-   "description": "e.g. Ground, Mezzanine, Level 1, Rooftop"
+   "label": "Floor Label"
   },
   {
    "fieldname": "sec_ixjur",
@@ -79,12 +80,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
-   "options": "Active\nUnder Renovation\nDecommissioned",
-   "default": "Active",
-   "in_list_view": 1
+   "options": "Active\nUnder Renovation\nDecommissioned"
   },
   {
    "fieldname": "sec_bjuhg",
@@ -92,10 +93,10 @@
    "label": "Floor Plan"
   },
   {
+   "description": "Upload PNG or SVG layout",
    "fieldname": "floor_plan",
    "fieldtype": "Attach Image",
-   "label": "Floor Plan",
-   "description": "Upload PNG or SVG layout"
+   "label": "Floor Plan"
   }
  ],
  "index_web_pages_for_search": 0,
@@ -106,66 +107,143 @@
  "modified_by": "Administrator",
  "module": "Asset",
  "name": "Property Floor",
+ "naming_rule": "By naming_series field",
+ "naming_series": "FLOOR-.####",
  "owner": "Administrator",
  "permissions": [
   {
-   "role": "Property Manager",
-   "read": 1,
-   "write": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Lease Manager",
+   "print": 1,
    "read": 1,
-   "email": 1,
-   "print": 1,
    "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
-   "role": "FM Manager",
-   "read": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Technician",
-   "read": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
    "role": "System Manager",
-   "read": 1,
-   "write": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Director",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Helpdesk",
+   "submit": 0,
+   "write": 0
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "autoname": "naming_series:",
- "naming_rule": "By naming_series field",
- "naming_series": "FLOOR-.####",
- "title_field": "floor_label"
+ "title_field": "floor_label",
+ "track_changes": 1
 }

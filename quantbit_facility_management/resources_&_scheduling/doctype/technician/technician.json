@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "naming_series:",
  "creation": "2026-04-07 00:00:00.000000",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -33,30 +34,30 @@
    "reqd": 1
   },
   {
+   "bold": 1,
    "fieldname": "technician_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Technician Name",
-   "reqd": 1,
-   "bold": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
+   "description": "Links to ERPNext Employee for payroll",
    "fieldname": "employee",
    "fieldtype": "Link",
    "label": "Employee (ERPNext)",
-   "options": "Employee",
-   "description": "Links to ERPNext Employee for payroll"
+   "options": "Employee"
   },
   {
    "fieldname": "col_fdicy",
    "fieldtype": "Column Break"
   },
   {
+   "default": "1",
    "fieldname": "is_active",
    "fieldtype": "Check",
-   "label": "Active",
-   "default": "1",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "label": "Active"
   },
   {
    "fieldname": "technician_email",
@@ -75,17 +76,17 @@
    "label": "Skills & Trade"
   },
   {
+   "description": "Comma-separated skills e.g. HVAC, Electrical, Plumbing",
    "fieldname": "skill_set",
    "fieldtype": "Small Text",
-   "label": "Skill Set",
-   "description": "Comma-separated skills e.g. HVAC, Electrical, Plumbing"
+   "label": "Skill Set"
   },
   {
    "fieldname": "trade_category",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Primary Trade",
-   "options": "\nHVAC\nElectrical\nPlumbing\nFire Safety\nGeneral Maintenance\nIT\nSecurity\nCleaning\nOther",
-   "in_list_view": 1
+   "options": "\nHVAC\nElectrical\nPlumbing\nFire Safety\nGeneral Maintenance\nIT\nSecurity\nCleaning\nOther"
   },
   {
    "fieldname": "sec_vsllm",
@@ -93,11 +94,11 @@
    "label": "Certifications"
   },
   {
+   "description": "Expiry alerts sent 30 days before",
    "fieldname": "certifications",
    "fieldtype": "Table",
    "label": "Certifications",
-   "options": "Technician Certification",
-   "description": "Expiry alerts sent 30 days before"
+   "options": "Technician Certification"
   }
  ],
  "index_web_pages_for_search": 0,
@@ -108,48 +109,104 @@
  "modified_by": "Administrator",
  "module": "Resources & Scheduling",
  "name": "Technician",
+ "naming_rule": "By naming_series field",
+ "naming_series": "TECH-.####",
  "owner": "Administrator",
  "permissions": [
   {
-   "role": "FM Manager",
-   "read": 1,
-   "write": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
-  },
-  {
-   "role": "Supervisor",
+   "print": 1,
    "read": 1,
-   "email": 1,
-   "print": 1,
    "report": 1,
-   "export": 1,
-   "share": 1
-  },
-  {
    "role": "System Manager",
-   "read": 1,
-   "write": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
-   "email": 1,
-   "print": 1,
-   "report": 1,
    "export": 1,
-   "share": 1
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Director",
+   "submit": 0,
+   "write": 0
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head Operations",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Branch Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Manager",
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Manager",
+   "submit": 0,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "autoname": "naming_series:",
- "naming_rule": "By naming_series field",
- "naming_series": "TECH-.####",
- "title_field": "technician_name"
+ "title_field": "technician_name",
+ "track_changes": 1
 }
